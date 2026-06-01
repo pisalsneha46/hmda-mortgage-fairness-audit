@@ -195,6 +195,14 @@ Deployment should be paused and escalated for review if any of the following occ
 
 These triggers are meant to be **pre‑committed governance rules** that can be audited and enforced by risk, compliance, or model risk management teams.
 
+## Key Results
+- **Model:** XGBoost, n=200 estimators, threshold=0.70
+- **Performance:** AUC = 0.8587, Log Loss = 0.3681, zero generalization gap
+- **Scale:** 8M+ training records, 837K+ test applicants
+- **Fairness:** No single-attribute violations for race/ethnicity/sex
+- **Violations found:** Age >74 (AIR=0.789), Black Female (AIR=0.794), NHOPI Female (AIR=0.746)
+- **Deployment recommendation:** Conditional — with mandatory human review for flagged subgroups
+
 ---
 
 ## Repository contents
